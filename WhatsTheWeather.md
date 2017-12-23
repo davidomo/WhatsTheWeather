@@ -19,62 +19,6 @@ Observations:
 
 
 ```python
-steve = final_df["Temp"].max()
-marc = final_df.loc[final_df["Temp"] == steve, :]
-marc
-```
-
-
-
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Lat</th>
-      <th>Lng</th>
-      <th>City</th>
-      <th>Country</th>
-      <th>Temp</th>
-      <th>Hum</th>
-      <th>Cloud</th>
-      <th>Wind</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>354</th>
-      <td>10.274128</td>
-      <td>19.894109</td>
-      <td>am timan</td>
-      <td>td</td>
-      <td>100.84</td>
-      <td>12</td>
-      <td>0</td>
-      <td>4.38</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
-```python
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -1800,7 +1744,7 @@ plt.show()
 ```
 
 
-![png](output_9_0.png)
+![png](output_8_0.png)
 
 
 
@@ -1818,7 +1762,7 @@ plt.show()
 ```
 
 
-![png](output_10_0.png)
+![png](output_9_0.png)
 
 
 
@@ -1835,7 +1779,7 @@ plt.show()
 ```
 
 
-![png](output_11_0.png)
+![png](output_10_0.png)
 
 
 
@@ -1852,5 +1796,5 @@ plt.show()
 ```
 
 
-![png](output_12_0.png)
+![png](output_11_0.png)
 
