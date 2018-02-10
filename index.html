@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>What's the Weather?</title>
+		<link rel="stylesheet" href = "reset.css">
+		<link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href = "style.css">
+	</head>
+
+	<body>
+		<nav class = "navbar navbar-default">
+			<div class = "container-fluid t_b">
+				<div class = "navbar-header">
+					<button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1" aria-expanded = "false">
+					</button>
+					<a class = "navbar-brand" href = "index.html"><strong><span class = "w_t">What's the Weather?</span></strong></a>
+				</div>
+				<div class = "collapse navbar-collapse w_t" id="bs-example-navbar-collapse-1">
+					<ul class = "nav navbar-nav navbar-right">
+						<li class = "dropdown">
+							<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false"><span class = "w_t">Plots</span><span class = "caret"></span></a>
+							<ul class = "dropdown-menu">
+								<li><a href = "page/Temperature.html">Temperature</a></li>
+								<li><a href = "page/Humidity.html">Humidity</a></li>
+								<li><a href = "page/Wind.html">Wind Speed</a></li>
+								<li><a href = "page/Cloud.html">Cloudiness</a></li>
+							</ul>
+						</li>
+						<li><a href = "page/Comparison.html"><span class = "w_t">Comparison</span></a></li>
+						<li><a href = "page/Data.html"><span class = "w_t">Data</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav> 
+
+		
+		<div class = "container">
+			<div class = "row">
+				<div class = "col-sm-12 col-md-8 w_b">
+					<h2 class = "main_text"><strong>What's the weather as you approach the equator?</strong></h2>
+					<hr>
+					<div class = "col-sm-12">
+						<img src="FiguresRedux/Lat_Temp3.png" class = "f_l" alt = "Latitude v Temperature">
+						<p>&nbsp;&nbsp;If someone was to ask you "What's the temperature like as you approach the equator?", your first instinct would probably to claim its hotter. Seems logical, no? But what if you had to prove it?</p>
+						
+						<p>&nbsp;&nbsp;This project focused on just how to prove that claim. Using a <a href = "https://openweathermap.org/api" target="_blank">public weather API</a> and Python, I created a script that pulled weather data from over 500 cities around the globe. This data was manipulated and displayed  in graph form.</p>
+						
+						<h4 class = "main_text"><strong>The Process</strong></h4>
+						
+						<p>&nbsp;&nbsp;The first step was to produce a list of randomized Latitude and Longitude coordinates. These randomized coordinates were passed through the <a href = "https://pypi.python.org/pypi/citipy" target = "_blank"><i>citypi library</i></a> to find the nearest town to each coordinate. These names of cities and countries were passed through the weather API to find the data. In order to get at least 500 data points, 1,800 randomized coordinates were passed through these steps. After deleting duplicate cities and cities without any data, the final list was narrowed to 621 individual data points.</p>
+
+						<p>&nbsp;&nbsp;These 621 points were organized with Python Pandas library. Output plots seen across this project were created using Matplotlib. Graphs in this output are flipped along the axes, that is, the independent is on the Y-axis and the dependent is on the X-axis. I purposefully flipped in this case since we are looking at the relationship of how far away a city is from the equator to its current weather. On the graphs, the line y = 0 would represent the equator, making the graphs an easier representation of how we generally look at the world.</p>
+
+						<p>&nbsp;&nbsp;The data on diplay was pulled at 12:00 PM EST on Friday, February 9, 2018.</p>
+
+						<p>&nbsp;&nbsp;To see the entire process, please <a href = "https://github.com/davidomo/WhatsTheWeather" target = "_blank">click here</a>.</p>
+					</div>
+				</div>
+				<div class = "col-sm-12 col-md-4 w_b">
+					<h3 class = "main_text"><strong>Visualizations</strong></h3>
+					<br>
+						<div class = "row">
+							<div class = "col-sm-6">
+								<a href = "page/Temperature.html">
+									<div class = "thumbnail">
+										<img src = "FiguresRedux/Lat_Temp3.png" alt = "Latitude v Temperature">
+										<div class = "caption">
+											<p class = "main_text"><strong>Temperature</strong></p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class = "col-sm-6">
+								<a href = "page/Humidity.html">
+									<div class = "thumbnail">
+										<img src = "FiguresRedux/Lat_Hum3.png" alt = "Latitude v Humidty">
+										<div class = "caption">
+											<p class = "main_text"><strong>Humidity</strong></p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class = "row">
+							<div class = "col-sm-6">
+								<a href = "page/Wind.html">
+									<div class = "thumbnail">
+										<img src = "FiguresRedux/Lat_Wind3.png" alt = "Latitude v Wind Speed">
+										<div class = "caption">
+											<p class = "main_text"><strong>Wind Speed</strong></p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class = "col-sm-6">
+								<a href = "page/Cloud.html">
+									<div class = "thumbnail">
+										<img src = "FiguresRedux/Lat_Cloud3.png" alt = "Latitude v Cloud Coverage">
+										<div class = "caption">
+											<p class = "main_text"><strong>Cloud Coverage</strong></p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+				</div>		
+			</div>
+		</div>
+		<div>
+			<div class = "b_u_p"></div>
+		</div>
+
+		<div class = "footer">
+			<p><strong>A production by David O'Morrissey</strong> &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; <a href = "https://github.com/davidomo" target = "_blank" class = "w_t"><strong>Github</strong></a> &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; <a href = "https://www.linkedin.com/in/david-o-morrissey-50957a5a/" target = "_blank" class = "w_t"><strong>Linkedin</strong></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		</div>
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
+	</body>
+
+</html>
