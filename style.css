@@ -61,6 +61,12 @@
 	text-align: right;
 }
 
+.b_t {
+	border: 15px;
+	border-style: solid;
+	border-color: #ccfffc;
+}
+
 #dropdown_links {
 	color: white;
 }
