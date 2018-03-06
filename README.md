@@ -1,4 +1,6 @@
 # WhatsTheWeather
+For a more visual and interactive version of this project, please visit: https://davidomo.github.io/WhatsTheWeather/index.html
+
 What's the weather like as we approach the equator? 
 
 As most would correctly guess, the weather becomes warmer closer to the equator. However, what if you had to prove it with hard data?
